@@ -18,6 +18,7 @@ module.exports = () => {
       filename: "[name].bundle.js",
       path: path.resolve(__dirname, "dist"),
       clean: true,
+      assetModuleFilename: "[name][ext]",
     },
     plugins: [
       new HtmlWebpackPlugin({
@@ -28,7 +29,7 @@ module.exports = () => {
       new MiniCssExtractPlugin(),
       new InjectManifest({
         swSrc: "./src-sw.js",
-        swDest: "service-worker.js",
+        // swDest: "service-worker.js",
       }),
       new WebpackPwaManifest({
         name: "Just Another Text Editor",
@@ -62,7 +63,7 @@ module.exports = () => {
           },
         },
         {
-          test: /\.(png|svg|jpg|jpeg|gif)$/i,
+          test: /\.(png|svg|jpg|jpeg|gif|ico)$/i,
           type: "asset/resource",
         },
       ],

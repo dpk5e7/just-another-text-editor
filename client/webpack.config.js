@@ -17,8 +17,8 @@ module.exports = () => {
     output: {
       filename: "[name].bundle.js",
       path: path.resolve(__dirname, "dist"),
-      clean: true,
       assetModuleFilename: "[name][ext]",
+      clean: true,
     },
     plugins: [
       new HtmlWebpackPlugin({
@@ -32,15 +32,28 @@ module.exports = () => {
         // swDest: "service-worker.js",
       }),
       new WebpackPwaManifest({
+        filename: "manifest.json",
         name: "Just Another Text Editor",
         short_name: "JATE",
         description: "Just Another Text Editor - Progressive Web Application",
-        background_color: "#ffffff",
-        crossorigin: "use-credentials", //can be null, use-credentials or anonymous
+        background_color: "#c0c0c0",
+        theme_color: "#13293d",
+        orientation: "portrait",
+        display: "standalone",
+        id: "/",
+        start_url: ".",
+        crossorigin: null, //can be null, use-credentials or anonymous
+        // crossorigin: "use-credentials", //can be null, use-credentials or anonymous
+        inject: true,
+        fingerprints: false,
+        ios: true,
+        publicPath: "/",
+        includeDirectory: true,
         icons: [
           {
             src: path.resolve("./src/images/logo.png"),
             sizes: [96, 128, 192, 256, 384, 512], // multiple sizes
+            destination: path.join("images"),
           },
         ],
       }),

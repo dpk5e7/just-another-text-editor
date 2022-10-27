@@ -30,12 +30,14 @@ export default class {
     });
 
     this.editor.on('change', () => {
+      console.log("Saving to localStorage...");
       localStorage.setItem('content', this.editor.getValue());
     });
 
     // Save the content of the editor when the editor itself is loses focus
     this.editor.on('blur', () => {
-      console.log('The editor has lost focus');
+      //console.log('The editor has lost focus');
+      console.log("Saving to IndexedDB...");
       putDb(localStorage.getItem('content'));
     });
   }

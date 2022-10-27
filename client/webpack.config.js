@@ -22,9 +22,10 @@ module.exports = () => {
     },
     plugins: [
       new HtmlWebpackPlugin({
-        title: "Just Annother Text Editor",
+        title: "Just Another Text Editor",
         filename: "index.html",
         template: "./index.html",
+        favicon: "./favicon.ico",
       }),
       new MiniCssExtractPlugin(),
       new InjectManifest({

@@ -1,16 +1,22 @@
-# 19 Progressive Web Applications (PWA): Text Editor
+# Just Another Text Editor
 
-## Your Task
+## Description
 
-As you have progressed through this course, you have put together a number of impressive projects that you can show off to potential employers. This project is no exception; in fact, it features some of the most impressive expressions of the concepts you have learned so far.
+This project is a text editor that runs in the browser. It is a single-page application that meets the progressive web application (PWA) criteria. Additionally, it features a number of data persistence techniques that serve as redundancy in case one of the options is not supported by the browser. The application also functions offline.
 
-Your task is to build a text editor that runs in the browser. The app will be a single-page application that meets the PWA criteria. Additionally, it will feature a number of data persistence techniques that serve as redundancy in case one of the options is not supported by the browser. The application will also function offline.
+The technologies used in this application are:
 
-To build this text editor, you will start with an existing application and implement methods for getting and storing data to an IndexedDB database. You will use a package called `idb`, which is a lightweight wrapper around the IndexedDB API. It features a number of methods that are useful for storing and retrieving data, and is used by companies like Google and Mozilla.
+- [Node.js](https://nodejs.org/en/)
+- [Express.js](https://expressjs.com/) to run the web server
+- [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) to store the data
+- [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API) also to store the data
+- [idb](https://www.npmjs.com/package/idb) as a wrapper around the IndexedDB API
+- [WebPack](https://webpack.js.org/) as a static module bundler
+- [Workbox](https://developer.chrome.com/docs/workbox/) for service worker libraries
+- [concurrently](https://www.npmjs.com/package/concurrently) to run multiple commands concurrently
+- [Babel](https://www.npmjs.com/package/Babel) for backward compatibility with older browsers
 
-You will deploy this full-stack application to Heroku using the [Heroku Deployment Guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/heroku/heroku-deployment-guide).
-
-## User Story
+### User Story
 
 ```md
 AS A developer
@@ -18,7 +24,7 @@ I WANT to create notes or code snippets with or without an internet connection
 SO THAT I can reliably retrieve them for later use
 ```
 
-## Acceptance Criteria
+### Acceptance Criteria
 
 ```md
 GIVEN a text editor web application
@@ -48,96 +54,46 @@ WHEN I deploy to Heroku
 THEN I should have proper build scripts for a webpack application
 ```
 
-## Mock-Up
+## Table of Contents
 
-The following animation demonstrates the application functionality:
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contributing](#contributing)
+- [Questions](#questions)
 
-![Demonstration of the finished Module 19 Challenge being used in the browser and then installed.](./assets/00-demo.gif)
+## Installation
 
-The following image shows the application's `manifest.json` file:
+### Dependencies
 
-![Demonstration of the finished Module 19 Challenge with a manifest file in the browser.](./assets/01-manifest.png)
+The use of a web browser.
 
-The following image shows the application's registered service worker:
+### URL
 
-![Demonstration of the finished Module 19 Challenge with a registered service worker in the browser.](./assets/02-service-worker.png)
+- [https://dpk5e7-jate.herokuapp.com/](https://dpk5e7-jate.herokuapp.com/)
 
-The following image shows the application's IndexedDB storage:
+### Screenshots
 
-![Demonstration of the finished Module 19 Challenge with a IndexedDB storage named 'jate' in the browser.](./assets/03-idb-storage.png)
+![Screenshot1](./assets/screenshot1.png)
 
-## Grading Requirements
+![Screenshot2](./assets/screenshot2.png)
 
-> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
->
-> - A repository that has no code
->
-> - A repository that includes a unique name but nothing else
->
-> - A repository that includes only a README file but nothing else
->
-> - A repository that only includes starter code
+![Screenshot3](./assets/screenshot3.png)
 
-This Challenge is graded based on the following criteria:
+![Screenshot4](./assets/screenshot4.png)
 
-### Technical Acceptance Criteria: 40%
+## License
 
-- Satisfies all of the above acceptance criteria plus the following:
+[![License:](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-  - Uses IndexedDB to create an object store and includes both GET and PUT methods
+This application is covered under the [MIT License](https://opensource.org/licenses/MIT).
 
-  - The application works without an internet connection
+## Contributing
 
-  - Automatically saves content inside the text editor when the DOM window is unfocused
+As this project is part of an individual assignment for the University of Denver's Coding Bootcamp, it would be inappropriate for anyone else to contribute to this project.
 
-  - Bundled with webpack
+## Questions
 
-  - Create a service worker with workbox that Caches static assets
+GitHub Link: [https://github.com/dpk5e7](https://github.com/dpk5e7)
 
-  - The application should use babel in order to use async / await
-
-  - Application must have a generated `manifest.json` using the `WebpackPwaManifest` plug-in
-
-  - Can be installed as a Progressive Web Application
-
-### Deployment: 32%
-
-- Application deployed to Heroku at live URL with build scripts
-
-- Application loads with no errors
-
-- Application GitHub URL submitted
-
-- GitHub repo contains application code
-
-### Application Quality: 15%
-
-- Application user experience is intuitive and easy to navigate
-
-- Application user interface style is clean and polished
-
-- Application resembles the mock-up functionality provided in the Challenge instructions
-
-### Repository Quality: 13%
-
-- Repository has a unique name
-
-- Repository follows best practices for file structure and naming conventions
-
-- Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-- Repository contains multiple descriptive commit messages
-
-- Repository contains quality README file with description, screenshot, and link to deployed application
-
-## Review
-
-You are required to submit the following for review:
-
-- The URL of the deployed application
-
-- The URL of the GitHub repository, with a unique name and a README describing the project
-
----
-
-© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+Please contact me at Daniel.Kelly@du.edu with any additional questions you may have.

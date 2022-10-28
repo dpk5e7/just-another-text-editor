@@ -1,5 +1,7 @@
 # Just Another Text Editor
 
+[![License:](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 ## Description
 
 This project is a text editor that runs in the browser. It is a single-page application that meets the progressive web application (PWA) criteria. Additionally, it features a number of data persistence techniques that serve as redundancy in case one of the options is not supported by the browser. The application also functions offline.
@@ -72,15 +74,9 @@ The use of a web browser.
 
 - [https://dpk5e7-jate.herokuapp.com/](https://dpk5e7-jate.herokuapp.com/)
 
-### Screenshots
+### Screenshot
 
 ![Screenshot1](./assets/screenshot1.png)
-
-![Screenshot2](./assets/screenshot2.png)
-
-![Screenshot3](./assets/screenshot3.png)
-
-![Screenshot4](./assets/screenshot4.png)
 
 ## License
 

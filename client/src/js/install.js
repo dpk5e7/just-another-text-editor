@@ -15,6 +15,7 @@ butInstall.addEventListener("click", async () => {
     deferredPrompt.prompt();
     const { outcome } = await deferredPrompt.userChoice;
     if (outcome === "accepted") {
+      // Install the app
       deferredPrompt = null;
       butInstall.classList.toggle("hidden", true);
     }
@@ -26,6 +27,6 @@ butInstall.addEventListener("click", async () => {
 window.addEventListener("appinstalled", () => {
   // Hide the button
   butInstall.classList.toggle("hidden", true);
-  //
+  // clear the deferredPrompt variable
   deferredPrompt = null;
 });
